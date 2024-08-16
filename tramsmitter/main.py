@@ -12,7 +12,8 @@ def transmit(n: int = 1):
         timeout=3.0
     )
     for i in range(n):
-        port.write(f"Hello {i}")
+        message = f"Hello {i}"
+        port.write(message.encode("utf-8"))
     else:
         print("Transmission completed!")
 

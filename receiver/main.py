@@ -13,8 +13,8 @@ def read():
         timeout=3.0
     )
     while True:
-        x = port.readline()
-        print(x)
+        response = port.readline()
+        print(f"Received: {response.decode('utf-8')}")
 
 
 if __name__ == '__main__':
