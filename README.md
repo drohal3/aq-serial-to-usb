@@ -1,4 +1,4 @@
-# Test script for USB to serial converter / Raspberry Pi UART communication 
+# Example scripts for USB to serial converter / Raspberry Pi UART communication 
 ## Setup:
 **Hardware:**
 - Adafruit CP2102N Friend - USB to Serial Converter ([link](https://www.adafruit.com/product/5335))
@@ -14,3 +14,13 @@
 | TXD       | 10 (GPIO15 - RXD) | TXD and RXD might be swapped in some components  |
 | RXD       | 8 (GPIO14 - TXD)  | TXD and RXD might be swapped in some components  |
 | RTS       |                   | not connected                                    |
+
+**Scripts:** <br/>
+The Python scripts located in this repository (each in its own directory) are intended to be run in 
+a Raspberry Pi 4 or 5 device with Raspberrian OS and Python installed.
+
+## Transmitter
+...
+
+## Receiver
+...
