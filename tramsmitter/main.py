@@ -1,7 +1,7 @@
 import serial
 import time
 
-PORT = "/dev/ttyAMA0"
+PORT = "/dev/ttyS0"
 def transmit(n: int = 1):
     port = serial.Serial(
         port=PORT,
