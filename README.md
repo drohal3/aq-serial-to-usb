@@ -17,10 +17,14 @@
 
 **Scripts:** <br/>
 The Python scripts located in this repository (each in its own directory) are intended to be run in 
-a Raspberry Pi 4 or 5 device with Raspberrian OS and Python installed.
+a Raspberry Pi 4 or 5 device with Raspberrian OS and Python installed. Also, pyserial package is required.
 
 ## Transmitter
-...
+```bash
+python3 ./transmitter/main.py
+```
 
 ## Receiver
-...
+```bash
+python3 ./receiver/main.py
+```
