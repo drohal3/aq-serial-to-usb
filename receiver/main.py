@@ -12,7 +12,7 @@ def readline_cr(port):
             return rv
 
 def read():
-    port = serial.Serial(PORT, baudrate=115200, timeout=3.0)
+    port = serial.Serial(PORT, baudrate=9600)
     while True:
         rcv = readline_cr(port)
         print(rcv)
