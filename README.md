@@ -16,14 +16,14 @@
 | RTS       |                   | not connected                                    |
 
 The USB output from the Converter is connected to a free USB port of the Receiver 
-(can be the same as transmitter for demonstrating purposes).
+(can be the same device as transmitter for demonstrating purposes).
 
 > **Note:** PORT constants in the scripts must be adjusted. Typically, in transmitter, port is `"/dev/ttyS0"` 
 > and in transmitter it is `"/dev/ttyUSB0"`.
 
 **Scripts:** <br/>
 The Python scripts located in this repository (each in its own directory) are intended to be run in 
-a Raspberry Pi 4 or 5 device with Raspberrian OS and Python installed. Also, pyserial package is required.
+a Raspberry Pi 4 or 5 device with Raspberry Pi OS (form. Raspbian) and Python installed. Also, pyserial package is required.
 
 ## Transmitter
 ```bash
