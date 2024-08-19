@@ -25,11 +25,11 @@ def transmit(n: int = -1):
                 print("Transmission completed!")
                 break
             message = {**data, "n": loop}
+            print("Transmitting: ", json.dumps(message))
             json_message = json.dumps(message)
             ser.write((json_message + '\n').encode("utf-8"))
             time.sleep(1)
             loop += 1
-
     except KeyboardInterrupt:
         print("Transmission completed!")
     finally:
