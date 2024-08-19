@@ -9,7 +9,7 @@ data = {
     "temperature": 25.6,
     "humidity": 70
 }
-def transmit(n: int = 1):
+def transmit(n: int = -1):
     ser = serial.Serial(
         port=PORT,
         baudrate=9600,
@@ -19,15 +19,19 @@ def transmit(n: int = 1):
         timeout=3.0
     )
     try:
-        for i in range(n):
-            message = {**data, "n": i}
+        loop = 0
+        while True:
+            if loop == n:
+                print("Transmission completed!")
+                break
+            message = {**data, "n": loop}
             json_message = json.dumps(message)
             ser.write((json_message + '\n').encode("utf-8"))
             time.sleep(1)
-        else:
-            print("Transmission completed!")
+            loop += 1
+
     except KeyboardInterrupt:
-        pass
+        print("Transmission completed!")
     finally:
         ser.close()
 
