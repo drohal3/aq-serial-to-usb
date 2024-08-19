@@ -30,11 +30,34 @@ a Raspberry Pi 4 or 5 device with Raspberry Pi OS (form. Raspbian) and Python in
 python3 ./transmitter/main.py
 ```
 
+output:
+```
+Transmitting:  {"device_id": "test_0", "temperature": 25.6, "humidity": 70, "n": 0}
+Transmitting:  {"device_id": "test_0", "temperature": 25.6, "humidity": 70, "n": 1}
+Transmitting:  {"device_id": "test_0", "temperature": 25.6, "humidity": 70, "n": 2}
+Transmitting:  {"device_id": "test_0", "temperature": 25.6, "humidity": 70, "n": 3}
+...
+```
+
 ## Receiver
 ```bash
 python3 ./receiver/main.py
 ```
 
+output:
+```
+Received: {"device_id": "test_0", "temperature": 25.6, "humidity": 70, "n": 0}
+
+Received: {"device_id": "test_0", "temperature": 25.6, "humidity": 70, "n": 1}
+
+Received: {"device_id": "test_0", "temperature": 25.6, "humidity": 70, "n": 2}
+
+Received: {"device_id": "test_0", "temperature": 25.6, "humidity": 70, "n": 3}
+
+...
+```
+
+
 ## Common problems
-- incorrect serial port - Adjust PORT constant in a script, discover ports with `ls -la /dev/tty*`
+- incorrect serial port - Adjust PORT constants in the code, discover ports with `ls -la /dev/tty*`
 - swapped TXD and RXD cables
