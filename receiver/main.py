@@ -15,6 +15,8 @@ def read():
     try:
         while True:
             response = ser.readline()
+            if not response:
+                print("No response received")
             print(f"Received: {response.decode('utf-8')}")
     except KeyboardInterrupt:
         pass
