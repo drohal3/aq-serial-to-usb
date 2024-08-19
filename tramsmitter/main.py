@@ -20,7 +20,7 @@ def transmit(n: int = 1):
     )
     try:
         for i in range(n):
-            message = {**data, "n": n}
+            message = {**data, "n": i}
             json_message = json.dumps(message)
             ser.write((json_message + '\n').encode("utf-8"))
             time.sleep(1)
