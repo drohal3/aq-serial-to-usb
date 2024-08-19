@@ -4,7 +4,7 @@ import time
 PORT = "/dev/ttyUSB0"
 
 def read():
-    port = serial.Serial(
+    ser = serial.Serial(
         port=PORT,
         baudrate=9600,
         parity=serial.PARITY_NONE,
@@ -12,9 +12,14 @@ def read():
         bytesize=serial.EIGHTBITS,
         timeout=3.0
     )
-    while True:
-        response = port.readline()
-        print(f"Received: {response.decode('utf-8')}")
+    try:
+        while True:
+            response = ser.readline()
+            print(f"Received: {response.decode('utf-8')}")
+    except KeyboardInterrupt:
+        pass
+    finally:
+        ser.close()
 
 
 if __name__ == '__main__':
